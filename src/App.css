@@ -1,38 +1,239 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&display=swap");
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding and margin */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*Hero photo animation and decoration*/
+
+.photo {
+  --g: 4px;
+  --b: 10px;
+  --c: #1f2937;
+
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background: var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+    var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: 0.3s;
+}
+img:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+
+/* Styling the navegation menu */
+.menu .link {
+  display: block;
+  height: 100%;
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f2937;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px #d1d5db;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-align: center;
+  padding: 0 10px;
+  margin-right: 30px;
+}
+
+.menu .link:after,
+.menu .link:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+}
+
+.menu .link:after {
+  width: 0%;
+  height: 80%;
+  border-top: 2px solid #1f2937;
+  border-bottom: 2px solid #1f2937;
+  transition: all 0.3s ease;
+}
+
+.menu .link:before {
+  width: 120%;
+  height: 0%;
+  border-left: 2px solid #1f2937;
+  border-right: 2px solid #1f2937;
+  transition: all 0.5s ease;
+}
+
+.menu .link:hover::before {
+  height: 80%;
+}
+
+.menu .link:hover::after {
+  width: 120%;
+}
+
+/* Styling the background */
+
+.bodyBackground {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bodyBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("./images/background.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.notification {
+  padding: 10px 20px;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 4px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.success {
+  background-color: #4caf50; /* Green for success */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.error {
+  background-color: #f44336; /* Red for error */
+}
+
+.custom-size {
+  max-width: 792px;
+  max-height: 375px;
+  width: 100%;
+  height: auto;
+}
+
+.anchor {
+  text-decoration: none;
+  color: #0061b6;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0065bd;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navTrigger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.navTrigger i {
+  background-color: #2d3748;
+  border-radius: 2px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navTrigger.active i:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navTrigger.active i:nth-child(2) {
+  opacity: 0;
+}
+
+.navTrigger.active i:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-left {
+  left: 28px;
+}
+
+.arrow-right {
+  right: 28px;
+}
+
+.hover-parent:hover .arrow-left,
+.hover-parent:hover .arrow-right {
+  color: #394757;
+  transform: scale(1.15) translateY(-50%);
+  opacity: 0.9;
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+/* media queries */
+@media screen and (min-width: 350px) and (max-width: 768px){
+  .photo{
+    --b: 6px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .flex.flex-col.font-montserrat.text-gray-900.text-justify.my-8
+    .leading-loose
+    p {
+    font-size: smaller; /* Or specify a fixed size, like 14px or 0.875rem */
   }
 }
