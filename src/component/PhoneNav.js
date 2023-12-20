@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SideNavBar from "./SideNavBar";
 
 function PhoneNav({ sideNav, toggleMenu, closeMenu }) {

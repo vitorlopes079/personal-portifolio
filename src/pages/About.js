@@ -61,7 +61,7 @@ function About() {
         </div>
         <div className="">
           <a
-            href="#"
+            href="https://gb.linkedin.com/"
             title="LinkedIn"
             className="inline-block bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-3  border border-blue-900 "
           >

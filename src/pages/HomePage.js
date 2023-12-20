@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <div className="flex flex-col justify-center items-center h-full  md:flex-row ">
       <div className=" overflow-hidden h-52 w-52  sm:mt-4 md:h-64 md:w-64 md:block  ">
-        <img src={myPhoto4} className="photo h-full w-full object-cover" />
+        <img src={myPhoto4} alt="black and white selfie of myself holding a camera" className="photo h-full w-full object-cover" />
       </div>
 
       <div className="w-4/6 p-2 my-4 flex flex-col justify-between  sm:w-3/6 md:justify-center md:h-60 md:ml-10 md:w-[350px] responsive1000:w-[370px] responsive1000:ml-20">
