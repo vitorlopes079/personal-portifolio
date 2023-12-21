@@ -18,7 +18,7 @@ export const hauterCouture = {
   image: hautecouture,
   gif: animation,
   code: "https://github.com/vitorlopes079/mock-store",
-  live: "https://glowing-faloodeh-bf3663.netlify.app",
+  live: "https://hautecouturestore.netlify.app",
   mobilePhoto1: hauterMobile,
   mobilePhoto2: hauterMobile2,
 };
@@ -30,7 +30,7 @@ export const redditMinimal = {
   image: redditminimal,
   gif: redditanimation,
   code: "https://github.com/vitorlopes079/RedditMinimal",
-  live: "https://chic-melba-caeeb5.netlify.app",
+  live: "https://redditminimal1.netlify.app",
   mobilePhoto1: redditMobile,
   mobilePhoto2: redditMobile2,
 };
