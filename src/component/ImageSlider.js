@@ -18,7 +18,7 @@ const ImageSlider = ({ images, isLargeScreen }) => {
       />
       <img
         src={images[currentIndex]}
-        className="border-2 border-gray-400"
+        className="border-1 border-gray-200 "
         alt={`Slide ${currentIndex}`}
       />
       <FontAwesomeIcon
