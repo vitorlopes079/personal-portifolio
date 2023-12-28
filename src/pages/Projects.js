@@ -28,8 +28,11 @@ function Projects() {
       <ProjectContainer
         title={hauterCouture.title}
         text={hauterCouture.text}
-        image={isLargeScreen ? hauterCouture.image : hauterCouture.mobilePhoto1}
-        gif={isLargeScreen ? hauterCouture.gif : hauterCouture.mobilePhoto2}
+        images={
+          isLargeScreen
+            ? hauterCouture.desktopImages
+            : hauterCouture.mobileImages
+        }
         isEven={isEven(hauterCouture.id)}
         code={hauterCouture.code}
         live={hauterCouture.live}
@@ -38,9 +41,12 @@ function Projects() {
       <ProjectContainer
         title={redditMinimal.title}
         text={redditMinimal.text}
-        image={isLargeScreen ? redditMinimal.image : redditMinimal.mobilePhoto1}
+        images={
+          isLargeScreen
+            ? redditMinimal.desktopImages
+            : redditMinimal.mobileImages
+        }
         isEven={isEven(redditMinimal.id)}
-        gif={isLargeScreen ? redditMinimal.gif : redditMinimal.mobilePhoto2}
         code={redditMinimal.code}
         live={redditMinimal.live}
         isLargeScreen={isLargeScreen}
@@ -49,11 +55,12 @@ function Projects() {
       <ProjectContainer
         title={jammingSpotify.title}
         text={jammingSpotify.text}
-        image={
-          isLargeScreen ? jammingSpotify.image : jammingSpotify.mobilePhoto1
+        images={
+          isLargeScreen
+            ? jammingSpotify.desktopImages
+            : jammingSpotify.mobileImages
         }
         isEven={isEven(jammingSpotify.id)}
-        gif={isLargeScreen ? jammingSpotify.gif : jammingSpotify.mobilePhoto2}
         code={jammingSpotify.code}
         live={jammingSpotify.live}
         isLargeScreen={isLargeScreen}

@@ -1,8 +1,8 @@
 import React from "react";
 import ImageSlider from "../component/ImageSlider";
 
-const ProjectContainer = ({ title, text, image, gif, isEven, code, live, isLargeScreen}) => {
-  const images = [image, gif];
+const ProjectContainer = ({ title, text, images, isEven, code, live, isLargeScreen}) => {
+  
 
   return (
     <div
