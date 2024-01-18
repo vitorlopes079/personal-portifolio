@@ -1,36 +1,42 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Switcher from "./Switcher";
+import { useTranslation } from "react-i18next";
+import Icons from "./Icons";
 
 function DesktopNav() {
+  const { t } = useTranslation();
+
   return (
-    <div className="w-full h-16 flex items-center">
-      <ul className="menu flex justify-center  items-center list-none p-0 pl-25 pr-25 w-full h-14 font-montserrat">
+    <div className="w-full h-16 flex items-center relative">
+      <Switcher />
+      <ul className="menu flex justify-center items-center list-none p-0 pl-25 pr-25 w-full h-14 font-montserrat">
         <NavLink
           to="/"
-          className="link text-lg  uppercase mr-7.5 "
+          className="link text-lg uppercase "
           style={({ isActive }) =>
             isActive ? { fontWeight: "500" } : undefined
           }
         >
-          Home
+          {t("Home")}
         </NavLink>
         <NavLink
           to="/about"
-          className="link text-lg  uppercase mr-7.5"
+          className="link text-lg uppercase"
           style={({ isActive }) =>
             isActive ? { fontWeight: "500" } : undefined
           }
         >
-          About
+          {t("About")}
         </NavLink>
         <NavLink
           to="./projects"
-          className="link text-lg uppercase mr-7.5"
+          className="link text-lg uppercase"
           style={({ isActive }) =>
             isActive ? { fontWeight: "500" } : undefined
           }
         >
-          Projects
+          {t("Projects")}
         </NavLink>
         <NavLink
           to="/contact"
@@ -39,8 +45,9 @@ function DesktopNav() {
             isActive ? { fontWeight: "500" } : undefined
           }
         >
-          Contact
+          {t("Contact")}
         </NavLink>
+        <Icons />
       </ul>
     </div>
   );

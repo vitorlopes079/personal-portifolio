@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import ProjectContainer from "./ProjectContainer";
+import ProjectContainer from "../component/ProjectContainer";
+import { useTranslation } from "react-i18next";
+
 
 import { hauterCouture, redditMinimal, jammingSpotify } from "../projects";
 
 function Projects() {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
-
+  const {t} = useTranslation();
   useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 768);
@@ -27,7 +29,7 @@ function Projects() {
     <div>
       <ProjectContainer
         title={hauterCouture.title}
-        text={hauterCouture.text}
+        text={t("Haute_couture")}
         images={
           isLargeScreen
             ? hauterCouture.desktopImages
@@ -40,7 +42,7 @@ function Projects() {
       />
       <ProjectContainer
         title={redditMinimal.title}
-        text={redditMinimal.text}
+        text={t("Reddit_minimal")}
         images={
           isLargeScreen
             ? redditMinimal.desktopImages
@@ -54,7 +56,7 @@ function Projects() {
 
       <ProjectContainer
         title={jammingSpotify.title}
-        text={jammingSpotify.text}
+        text={t("Jamming")}
         images={
           isLargeScreen
             ? jammingSpotify.desktopImages

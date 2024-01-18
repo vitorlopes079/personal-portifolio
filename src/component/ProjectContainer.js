@@ -1,8 +1,17 @@
 import React from "react";
-import ImageSlider from "../component/ImageSlider";
+import ImageSlider from "./ImageSlider";
+import { useTranslation } from "react-i18next";
 
-const ProjectContainer = ({ title, text, images, isEven, code, live, isLargeScreen}) => {
-  
+const ProjectContainer = ({
+  title,
+  text,
+  images,
+  isEven,
+  code,
+  live,
+  isLargeScreen,
+}) => {
+  const { t } = useTranslation();
 
   return (
     <div
@@ -24,9 +33,10 @@ const ProjectContainer = ({ title, text, images, isEven, code, live, isLargeScre
             <a
               href={live}
               className="anchor underline"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              View Website
+              {t("View_website")}
             </a>
           </p>
 
@@ -34,9 +44,10 @@ const ProjectContainer = ({ title, text, images, isEven, code, live, isLargeScre
             <a
               href={code}
               className="anchor underline"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              View Code
+              {t("View_code")}
             </a>
           </p>
         </div>

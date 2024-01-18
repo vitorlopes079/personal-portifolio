@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -10,6 +11,7 @@ export default function ContactForm() {
     message: "",
   });
   const form = useRef();
+  const { t } = useTranslation();
 
   const handleChange = (event) => {
     if (isSubmitted || isError) {
@@ -35,7 +37,6 @@ export default function ContactForm() {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setIsSubmitted(true);
           setIsError(false);
           setFormData({
@@ -45,7 +46,6 @@ export default function ContactForm() {
           });
         },
         (error) => {
-          console.log(error.text);
           setIsSubmitted(false);
           setIsError(true);
           setFormData({
@@ -68,7 +68,7 @@ export default function ContactForm() {
             htmlFor="name"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
-            Name
+            {t("Name")}
           </label>
           <input
             type="text"
@@ -77,7 +77,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="Name"
+            placeholder={t("Name")}
             required
           />
         </div>
@@ -87,7 +87,7 @@ export default function ContactForm() {
             htmlFor="email"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
-            Email address
+            {t("Email")}
           </label>
           <input
             type="email"
@@ -96,7 +96,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="Email address"
+            placeholder={t("Email")}
             required
           />
         </div>
@@ -106,7 +106,7 @@ export default function ContactForm() {
             htmlFor="message"
             className="block mb-2 text-sm font-medium text-gray-900"
           >
-            Message
+            {t("Message")}
           </label>
           <textarea
             id="message"
@@ -115,25 +115,23 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="Your message"
+            placeholder={t("Your_message")}
             required
           ></textarea>
         </div>
         {isSubmitted && (
-          <div className="notification success">
-            Your email has been sent successfully!
-          </div>
+          <div className="notification success">{t("Success")}</div>
         )}
 
-        {isError && (
-          <div className="notification error">Sorry, something went wrong.</div>
-        )}
+        {isError && <div className="notification error">{t("Error")}</div>}
 
         <div className="flex justify-center mb-6">
           <button
             disabled={isFormIncomplete}
             type="submit"
-            className={`relative px-5 py-2 overflow-hidden font-medium text-gray-900 bg-white border border-gray-100 rounded group w-64 mt-5 ${isFormIncomplete ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`relative px-5 py-2 overflow-hidden font-medium text-gray-900 bg-white border border-gray-100 rounded group w-64 mt-5 ${
+              isFormIncomplete ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
             <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
             <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
@@ -141,7 +139,7 @@ export default function ContactForm() {
             <span className="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
             <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
             <span className="relative transition-colors duration-300 delay-200 group-hover:text-white ease">
-              Send
+              {t("Send")}
             </span>
           </button>
         </div>

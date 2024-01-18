@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
+
 
 const ImageSlider = ({ images, isLargeScreen }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const {t} = useTranslation()
   const goToPreviousImage = () => {
     const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
@@ -35,7 +37,7 @@ const ImageSlider = ({ images, isLargeScreen }) => {
       <div>
         {isLargeScreen && (
           <p className="text-sm text-red-600 pt-2">
-            See the website's mobile view by narrowing your screen!
+            {t("See_the_website")}
           </p>
         )}
       </div>

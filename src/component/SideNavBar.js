@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Icons from "./Icons";
 
 function SideNavBar({ isOpen, closeMenu }) {
   const sidebarStyle = {
@@ -18,7 +19,7 @@ function SideNavBar({ isOpen, closeMenu }) {
         to="/"
         onClick={closeMenu}
         style={({ isActive }) => (isActive ? { fontWeight: "500" } : undefined)}
-        className="mb-2 font-montserrat hover:bg-gray-200 px-4 py-2 rounded cursor-pointer border-b border-b-2 border-gray-200"
+        className="mb-2 font-montserrat hover:bg-gray-200 px-4 py-2 rounded cursor-pointer border-gray-200"
       >
         HOME
       </NavLink>
@@ -46,6 +47,7 @@ function SideNavBar({ isOpen, closeMenu }) {
       >
         CONTACT
       </NavLink>
+      <Icons />
     </div>
   );
 }
