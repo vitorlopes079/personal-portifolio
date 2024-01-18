@@ -31,10 +31,11 @@
   filter: grayscale(50%);
   transition: 0.3s;
 }
-img:hover {
+
+.photo:hover {
   --_p: 75%;
   filter: grayscale(0%);
-}
+} 
 
 /* Styling the navegation menu */
 .menu .link {
@@ -118,7 +119,6 @@ img:hover {
   opacity: 0.3;
   z-index: -1;
 }
-
 .content {
   position: relative;
   z-index: 1;
@@ -132,12 +132,44 @@ img:hover {
   text-align: center;
 }
 
-.success {
-  background-color: #4caf50; /* Green for success */
+/* Styling the arrows bottons */
+.slider-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: background-color 100ms ease-in-out;
 }
 
+.slider-button:hover {
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+.slider-button:hover > *{
+  animation: squish  200ms ease-in-out;
+}
+
+.slider-button > * {
+  stroke: white;
+  fill: black;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+@keyframes squish {
+  50% {
+    scale: 1.4 0.6;
+  }
+}
+
+
+/* success and error messages */
+
+.success {
+  background-color: #4caf50;
+}
 .error {
-  background-color: #f44336; /* Red for error */
+  background-color: #f44336;
 }
 
 .custom-size {
@@ -167,13 +199,7 @@ img:hover {
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .underline:hover::before {
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-}
+
 
 .navTrigger {
   cursor: pointer;
@@ -205,29 +231,6 @@ img:hover {
 
 .navTrigger.active i:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
-}
-
-.arrow-left,
-.arrow-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.arrow-left {
-  left: 28px;
-}
-
-.arrow-right {
-  right: 28px;
-}
-
-.hover-parent:hover .arrow-left,
-.hover-parent:hover .arrow-right {
-  color: #394757;
-  transform: scale(1.15) translateY(-50%);
-  opacity: 0.9;
-  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
 }
 
 .responsive-image {
