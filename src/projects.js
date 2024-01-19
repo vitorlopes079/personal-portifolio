@@ -17,8 +17,28 @@ import jammingDesktop2 from "./images/jamming/jammingDesktop2.gif";
 import jammingMobile1 from "./images/jamming/jammingMobile1.png";
 import jammingMobile2 from "./images/jamming/jammingMobile2.png";
 
-export const hauterCouture = {
+import herbalBlissDesktop1 from "./images/herbalbliss/HerbalBlissDesktop1.png";
+import herbalBlissDesktop2 from "./images/herbalbliss/HerbalBlissDesktop2.png";
+import herbalBlissDesktop3 from "./images/herbalbliss/HerbalBlissDesktop3.png";
+import herbalBlissMobile1 from "./images/herbalbliss/HerbalBlissMobile1.png";
+import herbalBlissMobile2 from "./images/herbalbliss/HerbalBlissMobile2.png";
+import herbalBlissMobile3 from "./images/herbalbliss/HerbalBlissMobile3.png";
+
+export const teaShop = {
   id: 1,
+  title: "Herbal Bliss (on development)",
+  code: "https://github.com/vitorlopes079/tea-shop",
+  live: "https://herbalbliss.netlify.app/",
+  mobileImages: [herbalBlissMobile1, herbalBlissMobile2, herbalBlissMobile3],
+  desktopImages: [
+    herbalBlissDesktop1,
+    herbalBlissDesktop2,
+    herbalBlissDesktop3,
+  ],
+};
+
+export const hauterCouture = {
+  id: 2,
   title: "HAUTE COUTURE",
   code: "https://github.com/vitorlopes079/mock-store",
   live: "https://hautecouturestore.netlify.app",
@@ -27,7 +47,7 @@ export const hauterCouture = {
 };
 
 export const redditMinimal = {
-  id: 2,
+  id: 3,
   title: "Reddit Minimal",
   code: "https://github.com/vitorlopes079/RedditMinimal",
   live: "https://redditminimal1.netlify.app",
@@ -36,7 +56,7 @@ export const redditMinimal = {
 };
 
 export const jammingSpotify = {
-  id: 3,
+  id: 4,
   title: "Jamming",
   code: "https://github.com/vitorlopes079/jamming",
   live: "https://jammingplay.netlify.app",

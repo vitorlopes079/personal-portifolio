@@ -35,7 +35,7 @@
 .photo:hover {
   --_p: 75%;
   filter: grayscale(0%);
-} 
+}
 
 /* Styling the navegation menu */
 .menu .link {
@@ -138,30 +138,36 @@
   top: 0;
   bottom: 0;
   cursor: pointer;
-  transition: background-color 100ms ease-in-out;
 }
 
-.slider-button:hover {
-  background-color: rgb(0, 0, 0, 0.2);
-}
-
-.slider-button:hover > *{
-  animation: squish  200ms ease-in-out;
+.slider-button:hover > * {
+  animation: squish 200ms ease-in-out;
 }
 
 .slider-button > * {
-  stroke: white;
+  stroke: black;
   fill: black;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .slider-button:hover {
+    background-color: rgb(0, 0, 0, 0.2);
+  }
+
+  .slider-button > * {
+    stroke: white;
+    fill: black;
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
 @keyframes squish {
   50% {
     scale: 1.4 0.6;
   }
 }
-
 
 /* success and error messages */
 
@@ -178,28 +184,6 @@
   width: 100%;
   height: auto;
 }
-
-.anchor {
-  text-decoration: none;
-  color: #0061b6;
-}
-
-.underline {
-  position: relative;
-}
-
-.underline::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 2px;
-  background-color: #0065bd;
-  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-
 
 .navTrigger {
   cursor: pointer;
@@ -255,4 +239,10 @@
     p {
     font-size: smaller; /* Or specify a fixed size, like 14px or 0.875rem */
   }
+}
+
+.underline-blue {
+  text-decoration-color: #60a5fa; /* Set the underline color */
+  text-decoration-thickness: 2px; /* Optional: Adjust the thickness of the underline */
+  text-underline-offset: 3px; /* Optional: Adjust the distance of the underline from the text */
 }

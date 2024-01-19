@@ -25,7 +25,7 @@ function HomePage() {
 
       <div className="w-4/6 p-2 my-4 flex flex-col justify-between sm:w-3/6 md:justify-center md:h-60 md:ml-10 md:w-[350px] responsive1000:w-[370px] responsive1000:ml-20">
         <div>
-          <h1 className="font-montserrat text-xl text-gray-800 font-bold uppercase tracking-wide sm:text-3xl md:text-4xl responsive1000:mb-3 responsive1000:text-5xl">
+          <h1 className="font-montserrat text-xl text-gray-900 font-bold uppercase tracking-wide sm:text-3xl md:text-4xl responsive1000:mb-3 responsive1000:text-5xl">
             Vitor Lopes
           </h1>
 
@@ -33,7 +33,7 @@ function HomePage() {
             <Trans
               i18nKey="Welcome"
               components={{
-                1: <span className="font-bold text-base md:text-lg" />,
+                1: <span className=" underline underline-blue" />,
               }}
             />
           </p>

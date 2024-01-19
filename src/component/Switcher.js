@@ -22,7 +22,7 @@ const Switcher = () => {
         <span className="text-xs font-medium">EN</span>
       </div>
       <div
-        className={`absolute bg-gray-800 w-10 h-6 responsive1000:w-12 responsive1000:h-8 rounded-full shadow transform duration-300 ease-in-out ${
+        className={`absolute bg-gray-900 w-10 h-6 responsive1000:w-12 responsive1000:h-8 rounded-full shadow transform duration-300 ease-in-out ${
           isEnglish ? "translate-x-0" : "translate-x-10 responsive1000:translate-x-12"
         }`}
       ></div>

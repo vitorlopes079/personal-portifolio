@@ -29,5 +29,6 @@
   "Jamming": "A React web app, simplifies creating Spotify playlists. With a responsive design, it works seamlessly across various devices. Users can search for music and assemble custom playlists. These can be saved to their Spotify accounts using POST and GET requests for streamlined data management.",
   "View_website": "View website",
   "View_code": "View code",
-  "See_the_website": "See the website's mobile view by narrowing your screen!"
+  "See_the_website": "See the website's mobile view by narrowing your screen!",
+  "Herbal_bliss": "This project involves developing a website for a tea shop using Next.js, leveraging its server-side rendering capabilities for enhanced performance. TypeScript is integrated to ensure more reliable and maintainable code. The combination of these technologies aims to create a fast, efficient, and user-friendly online experience"
 }

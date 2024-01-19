@@ -9,7 +9,7 @@ const Icons = () => {
         href="https://www.linkedin.com/in/vitorlopesdev/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-2xl responsive1000:text-3xl text-gray-800 mr-4"
+        className="text-2xl responsive1000:text-3xl text-blue-400 mr-4"
       >
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
@@ -17,7 +17,7 @@ const Icons = () => {
         href="https://github.com/vitorlopes079"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-2xl responsive1000:text-3xl text-gray-800"
+        className="text-2xl responsive1000:text-3xl text-blue-400"
       >
         <FontAwesomeIcon icon={faGithub} />
       </a>

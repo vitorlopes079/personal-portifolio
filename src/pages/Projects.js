@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import ProjectContainer from "../component/ProjectContainer";
 import { useTranslation } from "react-i18next";
 
-
-import { hauterCouture, redditMinimal, jammingSpotify } from "../projects";
+import { hauterCouture, redditMinimal, jammingSpotify, teaShop } from "../projects";
 
 function Projects() {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 768);
@@ -27,6 +26,19 @@ function Projects() {
 
   return (
     <div>
+      <ProjectContainer
+        title={teaShop.title}
+        text={t("Herbal_bliss")}
+        images={
+          isLargeScreen
+            ? teaShop.desktopImages
+            : teaShop.mobileImages
+        }
+        isEven={isEven(teaShop.id)}
+        code={teaShop.code}
+        live={teaShop.live}
+        isLargeScreen={isLargeScreen}
+      />
       <ProjectContainer
         title={hauterCouture.title}
         text={t("Haute_couture")}

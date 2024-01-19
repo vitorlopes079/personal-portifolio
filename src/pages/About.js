@@ -52,7 +52,7 @@ function About() {
           <a
             href="https://www.linkedin.com/in/vitorlopesdev/"
             title="LinkedIn"
-            className="inline-block bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-3  border border-blue-900 "
+            className="inline-block bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-3  border border-blue-500 "
           >
             <i className="fa fa-linkedin fa-fw"></i> LinkedIn
           </a>
@@ -60,7 +60,7 @@ function About() {
       </div>
       <div className="mx-8 md:w-1/2">
         <div className="mb-8">
-          <h1 className="text-2xl font-montserrat text-gray-800 font-bold uppercase tracking-wide sm:text-3xl ">
+          <h1 className="text-2xl font-montserrat text-gray-900 font-bold uppercase tracking-wide sm:text-3xl ">
             Vitor Lopes
           </h1>
           <p className="text-sm font-montserrat text-gray-600 text-justify leading-relaxed sm:text-base">

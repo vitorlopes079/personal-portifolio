@@ -24,12 +24,11 @@
   "Your_message": "Sua mensagem",
   "Success": "Seu e-mail foi enviado com sucesso!",
   "Error": " Desculpe, algo deu errado.",
-  "Haute_couture":"Desenvolvida em React, Redux e Tailwind CSS, e utilizando a React Form Library para formulários, esta plataforma oferece uma UI otimizada e navegação fácil. Inclui autenticação via Firebase, gestão de ordens e login. Com funcionalidades de carrinho e visualização de pedidos, e dados dos produtos armazenados no Firestore, também garante uma experiência mobile eficiente.",
+  "Haute_couture": "Desenvolvida em React, Redux e Tailwind CSS, e utilizando a React Form Library para formulários, esta plataforma oferece uma UI otimizada e navegação fácil. Inclui autenticação via Firebase, gestão de ordens e login. Com funcionalidades de carrinho e visualização de pedidos, e dados dos produtos armazenados no Firestore, também garante uma experiência mobile eficiente.",
   "Reddit_minimal": "Voltada para uma navegação simplificada e minimalista no Reddit, é desenvolvida com HTML, CSS, JavaScript, React e integração à API do Reddit. Apresenta uma interface limpa e direta, facilitando o acesso a posts, comentários e mídia. Com design responsivo, proporciona uma experiência uniforme em diversos dispositivos, priorizando eficiência e simplicidade no uso.",
   "Jamming": "Desenvolvido em React, este aplicativo web facilita a criação de playlists do Spotify. Com um design responsivo, adapta-se perfeitamente a vários dispositivos. Permite aos usuários pesquisar músicas e criar playlists personalizadas, que podem ser armazenadas nas contas do Spotify. Utiliza POST e GET para um gerenciamento de dados eficiente, tornando a experiência do usuário fluída e intuitiva.",
   "View_website": "Ir para o website",
   "View_code": "Ver código",
-  "See_the_website": "Diminua a tela para ver a versão mobile!"
-
-  
+  "See_the_website": "Diminua a tela para ver a versão mobile!",
+  "Herbal_bliss": "Este projeto aborda o desenvolvimento de um website para uma loja de chás, utilizando Next.js para maximizar o desempenho com server side rendering. A integração de TypeScript visa garantir uma codificação mais sólida e de fácil manutenção. Esta combinação de tecnologias tem como meta oferecer uma experiência online rápida, eficiente e amigável aos usuários."
 }
