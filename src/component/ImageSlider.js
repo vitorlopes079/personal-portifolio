@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
+import { Image } from "@unpic/react";
 
 const ImageSlider = ({ images, isLargeScreen }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,11 +27,12 @@ const ImageSlider = ({ images, isLargeScreen }) => {
         </button>
         <div className="border-1 border-gray-200 w-full h-full overflow-hidden flex">
           {images.map((image, index) => (
-            <img
+            <Image
               key={index}
               src={image}
-              alt={`Slide ${index + 1}`} 
+              alt={`Slide ${index + 1}`}
               className="object-cover w-full h-full block"
+              layout="fullWidth"
               style={{
                 transform: `translateX(${-100 * currentIndex}%)`,
                 transition: "transform 300ms ease-in-out",

@@ -8,6 +8,7 @@ import typescript from "../images/typescript.png";
 
 import { useTranslation, Trans } from "react-i18next";
 import "flag-icons/css/flag-icons.min.css";
+import { Image } from "@unpic/react";
 
 function HomePage() {
   const { t } = useTranslation();
@@ -16,10 +17,13 @@ function HomePage() {
   return (
     <div className="flex flex-col justify-center items-center h-full md:flex-row overflow-hidden">
       <div className="overflow-hidden h-48 w-48 sm:mt-4 md:h-64 md:w-64 md:block">
-        <img
+        <Image
           src={myPhoto4}
           alt="black and white selfie of myself holding a camera"
           className="photo h-full w-full object-cover"
+          layout="constrained"
+          width={256}
+          height={256}
         />
       </div>
 
@@ -42,28 +46,53 @@ function HomePage() {
         </div>
 
         <div className="flex justify-between">
-          <img
+          <Image
             src={javascript}
             alt="javascript"
             className="h-8 w-8 md:h-10 md:w-10"
+            layout="fixed"
+            width={40}
+            height={40}
           />
-          <img src={react} alt="react" className="h-8 w-8 md:h-10 md:w-10" />
-          <img
+          <Image
+            src={react}
+            alt="react"
+            className="h-8 w-8 md:h-10 md:w-10"
+            layout="fixed"
+            width={40}
+            height={40}
+          />
+          <Image
             src={redux}
             alt="redux"
-            className="h-8 w-
-8 md:h-10 md:w-10"
+            className="h-8 w-8 md:h-10 md:w-10"
+            layout="fixed"
+            width={40}
+            height={40}
           />
-          <img
+          <Image
             src={tailwind}
             alt="tailwind"
             className="h-8 w-8 md:h-10 md:w-10"
+            layout="fixed"
+            width={40}
+            height={40}
           />
-          <img src={nextjs} alt="nextjs" className="h-8 w-8 sm:h-10 md:w-10" />
-          <img
+          <Image
+            src={nextjs}
+            alt="nextjs"
+            className="h-8 w-8 sm:h-10 md:w-10"
+            layout="fixed"
+            width={40}
+            height={40}
+          />
+          <Image
             src={typescript}
             alt="typescript"
             className="h-8 w-8 sm:h-10 md:w-10"
+            layout="fixed"
+            width={40}
+            height={40}
           />
         </div>
       </div>

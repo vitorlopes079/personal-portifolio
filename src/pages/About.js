@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import { Image } from "@unpic/react";
 
 function About() {
   const { t } = useTranslation();
@@ -12,10 +13,13 @@ function About() {
     <div className="flex flex-col-reverse md:flex-row justify-around mt-12 mb-12">
       <div className="ml-8">
         <div className="hidden md:block">
-          <img
+          <Image
             src={myPhoto4}
             alt="me holding a camera"
             className="max-h-96 max-w-96"
+            layout="constrained"
+            width={384}
+            height={384}
           />
         </div>
         <div className="flex flex-col font-montserrat text-gray-900 text-justify my-8 ">
