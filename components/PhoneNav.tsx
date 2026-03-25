@@ -1,0 +1,34 @@
+"use client";
+
+import SideNavBar from "./SideNavBar";
+import Switcher from "./Switcher";
+import { Locale } from "@/lib/translations";
+
+interface PhoneNavProps {
+  sideNav: boolean;
+  toggleMenu: () => void;
+  closeMenu: () => void;
+  locale: Locale;
+}
+
+export default function PhoneNav({
+  sideNav,
+  toggleMenu,
+  closeMenu,
+  locale,
+}: PhoneNavProps) {
+  return (
+    <div className="h-16 w-full flex items-center">
+      <div
+        className={`navTrigger ml-5 ${sideNav ? "active" : ""} flex item`}
+        onClick={toggleMenu}
+      >
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <SideNavBar isOpen={sideNav} closeMenu={closeMenu} locale={locale} />
+      <Switcher currentLocale={locale} />
+    </div>
+  );
+}
