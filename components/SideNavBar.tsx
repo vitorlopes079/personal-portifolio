@@ -59,6 +59,14 @@ export default function SideNavBar({ isOpen, closeMenu, locale }: SideNavBarProp
         PROJECTS
       </Link>
       <Link
+        href={`/${locale}/reviews`}
+        onClick={closeMenu}
+        style={isActive("reviews") ? { fontWeight: "500" } : undefined}
+        className="mb-2 font-montserrat hover:bg-gray-200 px-4 py-2 rounded cursor-pointer border-b border-b-2 border-gray-200"
+      >
+        REVIEWS
+      </Link>
+      <Link
         href={`/${locale}/contact`}
         onClick={closeMenu}
         style={isActive("contact") ? { fontWeight: "500" } : undefined}

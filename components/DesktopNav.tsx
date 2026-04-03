@@ -47,6 +47,13 @@ export default function DesktopNav({ locale, translations }: DesktopNavProps) {
           {translations.Projects}
         </Link>
         <Link
+          href={`/${locale}/reviews`}
+          className="link text-lg uppercase"
+          style={isActive("reviews") ? { fontWeight: "500" } : undefined}
+        >
+          {translations.Reviews}
+        </Link>
+        <Link
           href={`/${locale}/contact`}
           className="link text-lg uppercase"
           style={isActive("contact") ? { fontWeight: "500" } : undefined}

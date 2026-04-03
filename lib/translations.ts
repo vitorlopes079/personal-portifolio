@@ -39,6 +39,14 @@ const translations: Record<Locale, Record<string, string>> = {
     Rust_gambling:
       "A full-stack gambling platform featuring provably fair games, Steam item trading, and cryptocurrency payments. Built with Next.js, Node.js, and PostgreSQL, it includes multiple game modes like case opening, mines, and plinko, real-time multiplayer with Socket.io, and a comprehensive admin panel. (This was a real project built for a client - the company has since closed, demonstration only)",
     Websites: "Websites",
+    Reviews: "Reviews",
+    Reviews_Title: "CLIENT REVIEWS",
+    Reviews_Subtitle: "What my clients say about working with me",
+    Reviews_Disclaimer: "These are authentic reviews from jobs delivered through the Fiverr platform. The content shown is an exact copy of the original reviews, which can be verified at",
+    Reviews_Disclaimer_Link: "my Fiverr profile",
+    Reviews_Disclaimer_Note: "Customer repetitions may occur due to the same client ordering multiple times.",
+    Reviews_See_All: "See all",
+    Reviews_View_More: "View more",
     Repodoc:
       "An AI-powered tool that automatically generates documentation for any GitHub repository. Built with a microservices architecture using Python and FastAPI, it features AI agents orchestrated with CrewAI that analyze code and produce comprehensive documentation. Includes async job processing with Redis, containerization with Docker, and PostgreSQL storage via Supabase. (Personal learning project - intentionally over-engineered to practice real-world microservices patterns)",
   },
@@ -79,6 +87,14 @@ const translations: Record<Locale, Record<string, string>> = {
     Rust_gambling:
       "Uma plataforma de apostas full-stack com jogos comprovadamente justos, integração com Steam para troca de itens e pagamentos em criptomoedas. Desenvolvida com Next.js, Node.js e PostgreSQL, inclui múltiplos modos de jogo como abertura de caixas, mines e plinko, multiplayer em tempo real com Socket.io e painel administrativo completo. (Este foi um projeto real desenvolvido para um cliente - a empresa encerrou as atividades, apenas demonstração)",
     Websites: "Websites",
+    Reviews: "Avaliações",
+    Reviews_Title: "AVALIAÇÕES DE CLIENTES",
+    Reviews_Subtitle: "O que meus clientes dizem sobre trabalhar comigo",
+    Reviews_Disclaimer: "Estas são avaliações autênticas de trabalhos entregues através da plataforma Fiverr. O conteúdo exibido é uma cópia exata das avaliações originais, que podem ser verificadas em",
+    Reviews_Disclaimer_Link: "meu perfil no Fiverr",
+    Reviews_Disclaimer_Note: "Repetições de clientes podem ocorrer devido ao mesmo cliente realizar mais de um pedido.",
+    Reviews_See_All: "Ver todas",
+    Reviews_View_More: "Ver mais",
     Repodoc:
       "Uma ferramenta com IA que gera documentação automaticamente para qualquer repositório GitHub. Desenvolvida com arquitetura de microsserviços usando Python e FastAPI, utiliza agentes de IA orquestrados com CrewAI que analisam código e produzem documentação completa. Inclui processamento assíncrono de jobs com Redis, containerização com Docker e armazenamento PostgreSQL via Supabase. (Projeto pessoal de aprendizado - intencionalmente complexo para praticar padrões reais de microsserviços)",
   },
